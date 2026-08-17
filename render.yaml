@@ -11,8 +11,7 @@ services:
     autoDeploy: false
   - type: web
     name: e2e3611-web-linked
-    buildSource: express-hello-world-as
-    startCommand: node app.js
+    buildSource: e2e3611-as2
     plan: starter
     region: oregon
     autoDeploy: false
