@@ -13,25 +13,8 @@ services:
     name: e2e3611-web-linked
     buildSource: express-hello-world-as
     startCommand: node app.js
+    rootDir: apps/web
+    dockerCommand: node server.js
     plan: starter
     region: oregon
     autoDeploy: false
-  - type: web
-    name: e2e3611-web-new
-    buildSource: express-hello-world-as
-    startCommand: node app.js
-    plan: starter
-    region: oregon
-  - type: cron
-    name: e2e3611-cron-new
-    buildSource: express-hello-world-as
-    startCommand: node app.js
-    schedule: "0 5 1 * *"
-    plan: starter
-    region: oregon
-  - type: web
-    name: e2e3611-web-unknown
-    buildSource: does-not-exist
-    startCommand: node app.js
-    plan: starter
-    region: oregon
