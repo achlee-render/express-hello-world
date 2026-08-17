@@ -11,18 +11,27 @@ services:
     autoDeploy: false
   - type: web
     name: e2e3611-web-linked
-    runtime: node
-    repo: https://github.com/render-examples/express-hello-world
-    branch: main
-    buildCommand: yarn --frozen-lockfile install
+    buildSource: express-hello-world-as
     startCommand: node app.js
     plan: starter
     region: oregon
     autoDeploy: false
+  - type: web
+    name: e2e3611-web-new
+    buildSource: express-hello-world-as
+    startCommand: node app.js
+    plan: starter
+    region: oregon
   - type: cron
-    name: e2e3611-cron-trad
+    name: e2e3611-cron-new
     buildSource: express-hello-world-as
     startCommand: node app.js
     schedule: "0 5 1 * *"
+    plan: starter
+    region: oregon
+  - type: web
+    name: e2e3611-web-unknown
+    buildSource: does-not-exist
+    startCommand: node app.js
     plan: starter
     region: oregon
