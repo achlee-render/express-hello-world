@@ -1,11 +1,7 @@
 services:
   - type: web
     name: e2e3611-web-trad
-    runtime: node
-    repo: https://github.com/render-examples/express-hello-world
-    branch: main
+    buildSource: express-hello-world-as
     plan: starter
     region: oregon
-    buildCommand: yarn install --production=false
-    startCommand: node app.js
     autoDeploy: false
