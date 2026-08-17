@@ -14,7 +14,6 @@ services:
     buildSource: express-hello-world-as
     startCommand: node app.js
     rootDir: apps/web
-    dockerCommand: node server.js
     plan: starter
     region: oregon
     autoDeploy: false
