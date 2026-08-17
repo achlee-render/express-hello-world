@@ -1,3 +1,4 @@
+# S9: split_service_field_accessors off; rootDir on linked server must not diff
 services:
   - type: web
     name: e2e3611-web-trad
