@@ -6,6 +6,6 @@ services:
     branch: main
     plan: starter
     region: oregon
-    buildCommand: yarn --frozen-lockfile install
+    buildCommand: yarn install --production=false
     startCommand: node app.js
     autoDeploy: false
