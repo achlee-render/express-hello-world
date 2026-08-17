@@ -7,7 +7,7 @@ services:
     branch: main
     plan: starter
     region: oregon
-    buildCommand: yarn install --production=false
+    buildCommand: yarn install --production=false --ignore-optional
     startCommand: node app.js
     autoDeploy: false
   - type: web
