@@ -1,4 +1,4 @@
-# S9: split_service_field_accessors off; rootDir on linked server must not diff
+# S12: spec-level exclusion violations (both services below must be rejected)
 services:
   - type: web
     name: e2e3611-web-trad
@@ -7,14 +7,17 @@ services:
     branch: main
     plan: starter
     region: oregon
-    buildCommand: yarn install --production=false --ignore-optional
+    buildCommand: yarn install --production=false
     startCommand: node app.js
     autoDeploy: false
-  - type: web
-    name: e2e3611-web-linked
+  - type: static
+    name: e2e3611-static-bad
     buildSource: express-hello-world-as
+    staticPublishPath: dist
+  - type: web
+    name: e2e3611-web-mixed-bad
+    buildSource: express-hello-world-as
+    repo: https://github.com/render-examples/express-hello-world
     startCommand: node app.js
-    rootDir: apps/web
     plan: starter
     region: oregon
-    autoDeploy: false
