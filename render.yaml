@@ -10,8 +10,9 @@ services:
     buildCommand: yarn install --production=false
     startCommand: node app.js
     autoDeploy: false
-  - type: static
+  - type: web
     name: e2e3611-static-bad
+    runtime: static
     buildSource: express-hello-world-as
     staticPublishPath: dist
   - type: web
