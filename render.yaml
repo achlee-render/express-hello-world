@@ -2,6 +2,7 @@ services:
   - type: web
     name: e2e3611-web-trad
     buildSource: express-hello-world-as
+    startCommand: node app.js
     plan: starter
     region: oregon
     autoDeploy: false
