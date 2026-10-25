@@ -1,18 +1,15 @@
 services:
   - type: web
-    name: express-hello-world
+    name: e2e-4567-bp-web
     runtime: node
     repo: https://github.com/achlee-render/express-hello-world
-    plan: free
+    plan: starter
     buildCommand: yarn install --frozen-lockfile
     startCommand: node app.js
-    envVars:
-      - key: NODE_ENV
-        value: production
   - type: web
     name: e2e-4567-new-web
     runtime: node
     repo: https://github.com/achlee-render/express-hello-world
-    plan: free
+    plan: starter
     buildCommand: yarn install --frozen-lockfile
     startCommand: node app.js
