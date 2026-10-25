@@ -2,6 +2,7 @@ services:
   - type: web
     name: express-hello-world
     runtime: node
+    repo: https://github.com/achlee-render/express-hello-world
     plan: free
     buildCommand: yarn install --frozen-lockfile
     startCommand: node app.js
@@ -11,6 +12,7 @@ services:
   - type: web
     name: e2e-4567-new-web
     runtime: node
+    repo: https://github.com/achlee-render/express-hello-world
     plan: free
     buildCommand: yarn install --frozen-lockfile
     startCommand: node app.js
