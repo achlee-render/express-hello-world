@@ -16,3 +16,5 @@ That's it! Your web service will be live on your Render URL as soon as the build
 
 EXP-4003 e2e push 2026-10-08T22:11:09Z
 EXP-4003 e2e push 2 2026-10-09T00:22:07Z
+
+EXP-4567 preview slug e2e 2026-10-25T05:10Z
