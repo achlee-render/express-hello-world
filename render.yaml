@@ -8,3 +8,9 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+  - type: web
+    name: e2e-4567-new-web
+    runtime: node
+    plan: free
+    buildCommand: yarn install --frozen-lockfile
+    startCommand: node app.js
